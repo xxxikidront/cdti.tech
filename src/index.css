@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 5.9% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 5.9% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5.9% 10%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --zinc-50: 240 5% 96%;
+    --zinc-100: 240 4.8% 95.9%;
+    --zinc-200: 240 5.9% 90%;
+    --zinc-300: 240 4.9% 83.9%;
+    --zinc-400: 240 5% 64.9%;
+    --zinc-500: 240 3.8% 46.1%;
+    --zinc-600: 240 5.2% 33.9%;
+    --zinc-900: 240 5.9% 10%;
+
+    --blue-50: 214 100% 97%;
+    --blue-100: 214 95% 93%;
+    --blue-500: 217 91% 60%;
+    --blue-600: 221 83% 53%;
+    --blue-700: 224 76% 48%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--zinc-300));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--zinc-400));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Glass Card */
+  .glass-card {
+    @apply bg-background/85 backdrop-blur-xl border border-border/80;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Dot Background */
+  .dot-background {
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    @apply -translate-y-0.5 shadow-lg border-muted-foreground/30;
+  }
+
+  /* Modal Animation */
+  .modal-enter {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  .modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  }
+
+  /* Event Card */
+  .event-card {
+    @apply transition-all duration-300;
+  }
+  .event-card:hover {
+    @apply -translate-y-0.5 shadow-lg border-muted-foreground/30;
+  }
+
+  /* Member Card */
+  .member-card {
+    @apply transition-all duration-300;
+  }
+  .member-card:hover {
+    @apply -translate-y-0.5 shadow-lg border-muted-foreground/30;
+  }
+
+  /* Info Card */
+  .info-card:hover {
+    @apply border-muted-foreground/30 shadow-md;
+  }
+
+  /* Filter Button Active */
+  .filter-active {
+    @apply bg-foreground text-background border-foreground;
+  }
+
+  /* Filter Button Inactive */
+  .filter-inactive {
+    @apply bg-background text-muted-foreground border-border hover:border-muted-foreground/50 hover:text-foreground;
+  }
+}
