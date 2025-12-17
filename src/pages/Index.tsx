@@ -52,7 +52,7 @@ const Index = () => {
   };
 
   return (
-    <Layout transparentHeader>
+    <Layout transparentHeader children={undefined}>
       {/* Dot Background */}
       <div className="fixed inset-0 dot-background -z-10"></div>
 
