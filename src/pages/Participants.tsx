@@ -46,15 +46,15 @@ const Participants = () => {
         <header className="pt-24 md:pt-32 pb-8 md:pb-12 px-4 md:px-6 max-w-6xl mx-auto">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground mb-4">
-              Экспертное сообщество
+            Участники и партнёры
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl tracking-tight">
-              Комитет объединяет лидеров IT-отрасли Саратовской области,
-              представителей ведущих вузов и государственных структур.
+            Здесь собраны участники экосистемы Комитета: разработчики ПО и продуктовые команды,
+             интеграторы и поставщики инфраструктуры, телеком и кибербезопасность, образовательные организации и исследовательские центры.
             </p>
           </div>
         </header>
-
+        
         {/* Filters */}
         <div className="px-4 md:px-6 max-w-6xl mx-auto mb-8 md:mb-10 overflow-x-auto">
           <div className="flex items-center gap-2 text-sm min-w-max pb-2">
@@ -76,7 +76,7 @@ const Participants = () => {
                   : "bg-background border border-border text-muted-foreground hover:bg-muted"
               }`}
             >
-              Руководство
+              Члены комитета
             </button>
             {participantsData.filters.slice(1).map((filter) => (
               <button
@@ -100,7 +100,7 @@ const Participants = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-border flex-1"></div>
               <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-                Руководство комитета
+                Состав комитета
               </span>
               <div className="h-px bg-border flex-1"></div>
             </div>
@@ -165,7 +165,7 @@ const Participants = () => {
           <div className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
             <div className="max-w-xl text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-medium tracking-tight mb-2">
-                Хотите стать участником?
+                Хотите стать партнёром?
               </h2>
               <p className="text-muted-foreground text-sm">
                 Присоединяйтесь к комитету для обмена опытом и развития IT-отрасли региона.

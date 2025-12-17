@@ -18,6 +18,7 @@ export const LeaderCard = ({
   initials,
   position,
   company,
+  pk,
   description,
   photo,
   telegram,
@@ -76,8 +77,8 @@ export const LeaderCard = ({
         
         <div className="text-center">
           <h3 className="text-base sm:text-lg font-medium tracking-tight mb-1">{name}</h3>
-          <p className="text-muted-foreground text-xs mb-2 sm:mb-3">{company}</p>
-          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3 sm:mb-4">
+          <p className="text-muted-foreground text-xs mb-2 sm:mb-3">{pk}</p>
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3 sm:mb-4 text-justify">
             {description}
           </p>
         </div>

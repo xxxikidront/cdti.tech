@@ -58,7 +58,7 @@ const Events = () => {
 
     // Sort by id descending (highest id first)
     return filtered.sort(
-      (a, b) => parseInt(b.id) - parseInt(a.id)
+      (a, b) => parseInt(a.id) - parseInt(b.id)
     );
   }, [activeFilter]);
 
