@@ -10,6 +10,7 @@ interface LeaderModalProps {
     initials: string;
     position: string;
     company: string;
+    pk: string;
     description: string;
     fullBio?: string;
     photo?: string;
@@ -43,7 +44,7 @@ export const LeaderModal = ({ isOpen, onClose, leader }: LeaderModalProps) => {
           </div>
 
           {/* Photo */}
-          <div className="absolute left-4 sm:left-6 top-12 sm:top-[4.5rem] w-20 h-20 sm:w-28 sm:h-28 rounded-xl overflow-hidden border-4 border-background shadow-lg">
+          <div className="absolute left-4 sm:left-6 top-12 sm:top-[4.5rem] w-20 h-20 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-background shadow-lg">
             {leader.photo ? (
               <img
                 src={leader.photo}
@@ -111,7 +112,7 @@ export const LeaderModal = ({ isOpen, onClose, leader }: LeaderModalProps) => {
               <div className="mb-6">
                 <h3 className="text-sm font-medium text-foreground mb-3 flex items-center gap-2">
                   <Award className="w-4 h-4 text-accent" />
-                  Достижения
+                  Экспертиза
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {leader.achievements.map((achievement, index) => (

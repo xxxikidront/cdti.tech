@@ -63,17 +63,17 @@ const Index = () => {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-background/80 backdrop-blur-sm mb-6">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
               <span className="text-xs font-medium text-muted-foreground">
-                Стратегия цифровой трансформации 2024
+                Стратегия цифровой трансформации 2025
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-foreground mb-6 leading-[1.1]">
-              Инновации для бизнеса
+              Инновации и цифровые технологии для бизнеса
               <br />
               <span className="text-muted-foreground">в Саратовской области</span>
             </h1>
             <p className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-10 tracking-tight">
-              Объединяем IT-компании, государственные структуры и промышленный
-              сектор для создания благоприятной экосистемы.
+            Объединяем IT-компании, промышленность, образование и власть для внедрения сквозных цифровых технологий,
+            повышения производительности и развития технологического предпринимательства.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -92,6 +92,7 @@ const Index = () => {
               </Link>
             </div>
           </div>
+
 
           {/* Featured Event Card */}
           <div
@@ -112,23 +113,23 @@ const Index = () => {
                 </div>
 
                 <h3 className="text-2xl font-semibold tracking-tight text-foreground mb-2">
-                  IT-Форум «Цифровая Волга»
+                Форум технологического предпринимательства Саратовской области
                 </h3>
 
                 <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
                     <CalendarDays className="w-4 h-4 text-muted-foreground" />
-                    <span>15-16 Ноября</span>
+                    <span>февраль 2026</span>
                   </div>
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                  Главное событие осени для интеграторов и стартапов.
+                  Индустрия, разработчики, вузы, инвесторы и институты развития в одном контуре.
                 </p>
 
                 <div className="flex gap-3">
                   <button className="flex-1 h-10 bg-accent text-accent-foreground text-sm font-medium rounded-lg hover:bg-accent/90 transition-colors shadow-md">
-                    Регистрация
+                    Регистрация (будет доступна позже)
                   </button>
                   <button className="h-10 w-10 flex items-center justify-center bg-background border border-border rounded-lg hover:bg-muted transition-colors text-muted-foreground">
                     <ExternalLink className="w-4 h-4" />
@@ -141,30 +142,37 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
+      <div className="border-b border-border bg-background">
+          <div className="max-w-6xl mx-auto px-3 py-63">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest">
+          Саратовская область
+          </p>
+        </div>
+      </div>
       <section className="border-y border-border bg-background relative z-10">
         <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="space-y-1">
-            <p className="text-3xl font-semibold tracking-tight">85+</p>
+            <p className="text-3xl font-semibold tracking-tight">120+</p>
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
               IT-компаний
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-3xl font-semibold tracking-tight">12</p>
+            <p className="text-3xl font-semibold tracking-tight">850+</p>
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-              Законопроектов
+              Выпускников вузов
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-3xl font-semibold tracking-tight">₽4.5М</p>
+            <p className="text-3xl font-semibold tracking-tight">₽2.5Млрд</p>
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-              Грантовая поддержка
+              ИНВЕСТИЦИИ В IT
             </p>
           </div>
           <div className="space-y-1">
-            <p className="text-3xl font-semibold tracking-tight">24/7</p>
+            <p className="text-3xl font-semibold tracking-tight">50+</p>
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">
-              Консультации
+            СТАРТАПОВ
             </p>
           </div>
         </div>

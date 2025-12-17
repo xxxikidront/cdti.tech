@@ -25,15 +25,15 @@ const About = () => {
               Драйвер цифровой трансформации региона
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl tracking-tight">
-              Комитет по информационным технологиям при ТПП Саратовской области —
-              это площадка для диалога бизнеса, власти и образования. Мы создаем
-              условия для развития IT-предпринимательства.
+              Комитет ТПП Саратовской области по развитию цифровых технологий и инноваций —
+              площадка диалога бизнеса, государства и образования
+               и инструмент реализации проектов цифровой трансформации региона.
             </p>
           </div>
         </header>
 
         {/* Key Metrics */}
-        <section className="border-b border-border bg-background/50 backdrop-blur-sm">
+        <section className="hidden border-b border-border bg-background/50 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="animate-fade-in delay-100">
@@ -154,11 +154,11 @@ const About = () => {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-muted-foreground/30 flex items-center justify-center text-xs text-background font-medium border-2 border-muted-foreground/50">
-                    ПС
+                    ДБ
                   </div>
                   <div>
                     <div className="text-sm text-background font-medium">
-                      Петров Сергей
+                      Козюкин Денис Борисович
                     </div>
                     <div className="text-xs text-background/60">
                       Председатель комитета
@@ -263,7 +263,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-foreground mb-1">
-                    План работы на 2024
+                    План работы на 2026
                   </h4>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <span>PDF</span>
