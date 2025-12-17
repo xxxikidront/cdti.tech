@@ -7,6 +7,7 @@ const navigation = [
   { name: "О комитете", href: "/about" },
   { name: "Мероприятия", href: "/events" },
   { name: "Участники", href: "/participants" },
+  { name: "Услуги", href: "/services" },
   { name: "Документы", href: "/docs" },
 ];
 
@@ -28,25 +29,37 @@ export const Header = ({ transparent = false }: HeaderProps) => {
       )}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 bg-foreground rounded-lg flex items-center justify-center text-background">
-            <span className="font-semibold tracking-tighter text-xs">ТПП</span>
+        <Link 
+          to="/" 
+          onClick={() => window.scrollTo(0, 0)}
+          className="flex items-center gap-3"
+        >
+          <div className="w-11 h-11 bg-foreground rounded-lg flex items-center justify-center text-background">
+            <img 
+              src="/images/favicon1.ico" 
+              className="w-8 h-8 sm:w-8 sm:h-8 object-contain inline-block font-semibold tracking-tighter"
+            />
           </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-sm font-medium tracking-tight">
-              ЦИФРОВЫЕ ТЕХНОЛОГИИ
+          <div className="flex flex-col leading-[0.8rem]"> 
+            <span className="text-xs font-medium tracking-tight [word-spacing:-px]">
+              КОМИТЕТ ПО РАЗВИТИЮ
             </span>
-            <span className="text-xs text-muted-foreground tracking-tight">
-              САРАТОВСКАЯ ОБЛАСТЬ
+            <span className="text-xs font-medium tracking-tight">
+              ЦИФРОВЫХ ТЕХНОЛОГИЙ И ИНОВАЦИЙ
+            </span>
+            <span className="text-[10px] text-muted-foreground tracking-tight mt-0.5">
+              ТПП САРАТОВСКАЯ ОБЛАСТЬ
             </span>
           </div>
         </Link>
 
+        {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           {navigation.map((item) => (
             <Link
               key={item.name}
               to={item.href}
+              onClick={() => window.scrollTo(0, 0)}
               className={cn(
                 "hover:text-foreground transition-colors",
                 location.pathname === item.href && "text-foreground"
@@ -85,19 +98,25 @@ export const Header = ({ transparent = false }: HeaderProps) => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => {
+                  window.scrollTo(0, 0);
+                  setMobileMenuOpen(false);
+                }}
                 className={cn(
                   "block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2",
                   location.pathname === item.href && "text-foreground"
                 )}
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
             <Link
               to="/join"
+              onClick={() => {
+                window.scrollTo(0, 0);
+                setMobileMenuOpen(false);
+              }}
               className="flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-medium rounded-md hover:bg-foreground/90 transition-colors w-fit mt-4"
-              onClick={() => setMobileMenuOpen(false)}
             >
               <span>Вступить</span>
               <ArrowRight className="w-3 h-3" />
